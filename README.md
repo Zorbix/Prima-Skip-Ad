@@ -1,0 +1,21 @@
+# Prima Skip Ad
+
+Neoficiální rozšíření pro Chrome. Kliknutí na ikonu otevře panel s nastavením posunu. Výchozí hodnota je 60 sekund. Hodnotu můžeš přepsat nebo měnit tlačítky −60 a +60; minimum je 0. Nastavení se automaticky ukládá. Tlačítko „Posunout“ posune první video se zdrojem, které nemá `display: none`, o zvolený počet sekund dopředu. Při hodnotě 0 je posun vypnutý. Používá stejný výběr videa jako původní skript do konzole. U konce záznamu je posun kratší.
+
+## Instalace
+
+1. V Chromu otevři `chrome://extensions`.
+2. Vpravo nahoře zapni **Režim pro vývojáře**.
+3. Klikni na **Načíst rozbalené** a vyber složku s projektem, která obsahuje `manifest.json`.
+4. V nabídce rozšíření (ikona puzzle) připni **Prima Skip Ad** na lištu.
+5. Spusť video a klikni na ikonu rozšíření. Nastav počet sekund a klikni na **Posunout**.
+
+Výsledek posunu nebo případná chyba se zobrazí přímo v panelu.
+
+Rozšíření používá oprávnění `activeTab`, `scripting` a `storage` pro uložení nastavení: přístup k aktivní stránce získá kliknutím na ikonu. Neodesílá žádná data. Funguje i na jiných stránkách s běžným HTML videem. Video uvnitř vloženého rámce (iframe) tato verze nevyhledává. Omezení přetáčení stanovená přehrávačem zůstávají v platnosti.
+
+Po změně souborů klikni u rozšíření na **Znovu načíst**. Složku po instalaci nepřesouvej ani nemaž.
+
+## Chrome Web Store
+
+Připravený balíček: `store/prima-skip-ad-1.1.0.zip`. Podklady, texty a zbývající kroky jsou v `CHROMEWEBSTORE.md`. Zásady ochrany soukromí jsou v `PRIVACY.md`; do obchodu vložte https://github.com/Zorbix/Prima-Skip-Ad/blob/main/PRIVACY.md. Podpora: [petr.dvorak192@seznam.cz](mailto:petr.dvorak192@seznam.cz), https://github.com/Zorbix. Výsledky automatizované kontroly a její omezení jsou v `store/VALIDATION.md`.

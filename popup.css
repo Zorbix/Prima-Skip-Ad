@@ -1,0 +1,12 @@
+body { width: 280px; margin: 0; padding: 20px; font: 14px system-ui, sans-serif; color: #172033; background: #f8fafc; }
+h1 { font-size: 20px; margin: 0 0 20px; }
+label { display: block; margin-bottom: 8px; }
+.controls { display: flex; gap: 8px; margin-bottom: 16px; }
+button, input { box-sizing: border-box; border: 1px solid #cbd5e1; border-radius: 8px; padding: 10px; font: inherit; }
+button { cursor: pointer; background: white; }
+input { width: 112px; min-width: 0; text-align: center; flex: 1; }
+button:disabled { opacity: .45; cursor: default; }
+button:focus-visible, input:focus-visible { outline: 2px solid #2563eb; outline-offset: 2px; }
+#skip { width: 100%; background: #2563eb; color: white; border-color: #2563eb; font-weight: 600; }
+#status { margin: 12px 0 0; line-height: 1.5; }
+#status:empty { display: none; }
