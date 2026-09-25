@@ -6,16 +6,6 @@ Neoficiální rozšíření pro Chrome. Kliknutí na ikonu otevře panel s nasta
 
 Otevři [Prima Skip Ad v Chrome Web Store](https://chromewebstore.google.com/detail/prima-skip-ad/nbfjjcajjpfkiccigakjkgpmbbbafldm) a klikni na **Přidat do Chromu**. Po instalaci připni rozšíření pomocí ikony puzzle na liště Chromu.
 
-## Ruční instalace pro vývoj
-
-1. V Chromu otevři `chrome://extensions`.
-2. Vpravo nahoře zapni **Režim pro vývojáře**.
-3. Klikni na **Načíst rozbalené** a vyber složku s projektem, která obsahuje `manifest.json`.
-4. V nabídce rozšíření (ikona puzzle) připni **Prima Skip Ad** na lištu.
-5. Spusť video a klikni na ikonu rozšíření. Nastav počet sekund a klikni na **Posunout**.
-
-Výsledek posunu nebo případná chyba se zobrazí přímo v panelu.
-
 ## Automatické přeskočení reklam na Oneplay (1.2.0)
 
 V panelu zapni **Automaticky přeskočit reklamní blok**. Režim běží i po zavření panelu, pouze v této kartě a do obnovení stránky nebo vypnutí přepínače. Když Oneplay zakáže posun vpřed uvnitř známého reklamního bloku, rozšíření přečte časové údaje reklam z přehrávače a nastaví video na konec celého souvislého bloku. Nečeká na tlačítko „Přeskočit reklamu“. Ruční posun v sekundách zůstává samostatný; hodnota 0 automatický režim nevypíná.
