@@ -88,3 +88,56 @@ skip.addEventListener("click", async () => {
 });
 
 initialize();
+
+const autoSkip = document.querySelector("#auto-skip");
+const autoStatus = document.querySelector("#auto-status");
+let autoTabId;
+let autoBusy = false;
+
+async function autoCommand(action) {
+  const results = await chrome.scripting.executeScript({
+    target: { tabId: autoTabId },
+    world: "MAIN",
+    func: manageAdSkipping,
+    args: [action]
+  });
+  const result = results[0]?.result;
+  if (!result) throw new Error("Missing auto-skip result");
+  autoSkip.checked = result.enabled;
+  autoStatus.textContent = result.message;
+}
+
+autoSkip.addEventListener("change", async () => {
+  autoBusy = true;
+  autoSkip.disabled = true;
+  try {
+    await autoCommand(autoSkip.checked ? "start" : "stop");
+  } catch {
+    autoSkip.checked = false;
+    autoStatus.textContent = "Nastavení se nepodařilo ověřit. Otevři znovu panel rozšíření.";
+  } finally {
+    autoBusy = false;
+    autoSkip.disabled = false;
+  }
+});
+
+(async () => {
+  try {
+    const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
+    if (!tab?.id || !["oneplay.cz", "www.oneplay.cz"].includes(new URL(tab.url).hostname)) {
+      autoStatus.textContent = "Automatické přeskakování je dostupné na Oneplay.";
+      return;
+    }
+    autoTabId = tab.id;
+    await autoCommand("status");
+    autoSkip.disabled = false;
+    setInterval(async () => {
+      if (autoBusy) return;
+      autoBusy = true;
+      try { await autoCommand("status"); } catch { /* Retry while popup remains open. */ }
+      finally { autoBusy = false; }
+    }, 2000);
+  } catch {
+    autoStatus.textContent = "Automatický režim není na této stránce dostupný.";
+  }
+})();
