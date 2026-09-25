@@ -1,5 +1,6 @@
 const DEFAULT_SECONDS = 60;
-const STEP_SECONDS = 60;
+const DECREMENT_SECONDS = 15;
+const INCREMENT_SECONDS = 60;
 const input = document.querySelector("#seconds");
 const minus = document.querySelector("#minus");
 const plus = document.querySelector("#plus");
@@ -47,8 +48,8 @@ input.addEventListener("input", () => {
   if (input.value !== "") update(input.value);
 });
 input.addEventListener("change", () => update(input.value));
-minus.addEventListener("click", () => update(seconds - STEP_SECONDS));
-plus.addEventListener("click", () => update(seconds + STEP_SECONDS));
+minus.addEventListener("click", () => update(seconds - DECREMENT_SECONDS));
+plus.addEventListener("click", () => update(seconds + INCREMENT_SECONDS));
 
 skip.addEventListener("click", async () => {
   const amount = seconds;

@@ -1,6 +1,6 @@
 # Prima Skip Ad
 
-Neoficiální rozšíření pro Chrome. Kliknutí na ikonu otevře panel s nastavením posunu. Výchozí hodnota je 60 sekund. Hodnotu můžeš přepsat nebo měnit tlačítky −60 a +60; minimum je 0. Nastavení se automaticky ukládá. Tlačítko „Posunout“ posune první video se zdrojem, které nemá `display: none`, o zvolený počet sekund dopředu. Při hodnotě 0 je posun vypnutý. Používá stejný výběr videa jako původní skript do konzole. U konce záznamu je posun kratší.
+Neoficiální rozšíření pro Chrome. Kliknutí na ikonu otevře panel s nastavením posunu. Výchozí hodnota je 60 sekund. Hodnotu můžeš přepsat nebo měnit tlačítky −15 a +60; minimum je 0. Nastavení se automaticky ukládá. Tlačítko „Posunout“ posune první video se zdrojem, které nemá `display: none`, o zvolený počet sekund dopředu. Při hodnotě 0 je posun vypnutý. Používá stejný výběr videa jako původní skript do konzole. U konce záznamu je posun kratší.
 
 ## Instalace
 
