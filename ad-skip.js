@@ -1,9 +1,9 @@
 // Self-contained: Chrome serializes this function into the page's MAIN world.
 function manageAdSkipping(action = "status") {
   if (!["oneplay.cz", "www.oneplay.cz"].includes(location.hostname)) {
-    return { enabled: false, message: "Automatické přeskakování je dostupné na Oneplay." };
+    return { enabled: false, message: "Nenacházíte se na webu Oneplay." };
   }
-  const key = "__primaSkipAdControllerV1";
+  const key = "__prímovýSkipAdControllerV1";
   const existing = window[key];
   if (action === "stop") {
     existing?.stop();

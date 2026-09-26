@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
-  "name": "Prima Skip Ad",
-  "version": "1.2.0",
+  "name": "Prímový Skip Ad",
+  "version": "1.2.2",
   "description": "Posune přehrávané video o nastavitelný počet sekund.",
   "icons": {
     "16": "icons/icon-16.png",
@@ -24,7 +24,7 @@
       "48": "icons/icon-48.png",
       "128": "icons/icon-128.png"
     },
-    "default_title": "Prima Skip Ad",
+    "default_title": "Prímový Skip Ad",
     "default_popup": "popup.html"
   }
 }
