@@ -1,19 +1,19 @@
-# Prima Skip Ad — Chrome Web Store submission
+# Prímový Skip Ad — Chrome Web Store submission
 
 Prepared 2026-09-24 for version 1.1.0. Local materials are prepared; the item has not been uploaded or submitted. The privacy policy is included in the GitHub repository; the publisher must complete account setup and dashboard declarations.
 
 ## Package and assets
 
-- Upload `store/prima-skip-ad-1.1.0.zip` (only runtime files; manifest at root).
+- Upload `store/prímový-skip-ad-1.2.1.zip` (only runtime files; manifest at root).
 - Store icon: `store/assets/icon-128.png` (128 × 128 PNG; circular artwork 112 px).
 - Required small promotion: `store/assets/promo-440x280.png`.
 - Screenshot: `store/assets/screenshot-1280x800.png`.
 - Privacy policy for a public GitHub repository: `PRIVACY.md` (an HTML copy is also in `store/privacy/index.html`).
 - Keep the larger toolbar icons; the store icon has separate padding.
 
-## Store listing — Czech primary language
+## Store listing — Czech prímovýry language
 
-Name: Prima Skip Ad
+Name: Prímový Skip Ad
 
 Short description: Posune přehrávané video o nastavitelný počet sekund.
 
@@ -21,7 +21,7 @@ Suggested category: Tools (choose the corresponding current dashboard category).
 
 Detailed description:
 
-Prima Skip Ad je jednoduché neoficiální rozšíření pro ruční posun HTML videa dopředu.
+Prímový Skip Ad je jednoduché neoficiální rozšíření pro ruční posun HTML videa dopředu.
 
 Klikněte na ikonu rozšíření, zvolte počet sekund a stiskněte „Posunout“. Výchozí hodnota je 60 sekund. Interval lze zadat ručně nebo měnit tlačítky −60 a +60. Rozšíření si nastavení pamatuje lokálně v prohlížeči. Hodnota 0 posun vypne.
 
@@ -35,7 +35,7 @@ Funkce:
 Omezení:
 Rozšíření pracuje s prvním videem na stránce, které má zdroj a není skryté pomocí display: none. Nepodporuje videa uvnitř vložených rámců (iframe). Některé přehrávače nebo živé přenosy přetáčení neumožňují. Na interních stránkách prohlížeče rozšíření nefunguje. Rozšíření automaticky nerozpoznává ani neblokuje reklamy a neobchází omezení přehrávače. Název neznamená záruku přeskočení reklam.
 
-Nejde o oficiální produkt skupiny Prima a rozšíření není touto skupinou podporováno ani s ní spojeno.
+Nejde o oficiální rozšíření provozovatele služby Oneplay ani jeho partnerů.
 
 ## Privacy practices — paste-ready English
 
@@ -66,7 +66,7 @@ Support email: petr.dvorak192@seznam.cz
 
 No extension account or payment is required.
 1. Open an ordinary HTTP(S) page with a seekable HTML video in the main document. Start playback and pause well before the end.
-2. Invoke Prima Skip Ad. The default interval on a fresh installation is 60 seconds.
+2. Invoke Prímový Skip Ad. The default interval on a fresh installation is 60 seconds.
 3. Click „Posunout o 60 s“. The video should advance by about 60 seconds and the popup reports the result.
 4. Use +60, close and reopen the popup; confirm the interval persists. Enter 15 manually and confirm a 15-second advance.
 5. Set 0; the skip and minus buttons should be disabled. Restore 60.

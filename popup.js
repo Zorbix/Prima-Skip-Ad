@@ -126,7 +126,7 @@ autoSkip.addEventListener("change", async () => {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     if (!tab?.id || !["oneplay.cz", "www.oneplay.cz"].includes(new URL(tab.url).hostname)) {
-      autoStatus.textContent = "Automatické přeskakování je dostupné na Oneplay.";
+      autoStatus.textContent = "Automatické přeskakování je dostupné na známé české aplikaci pro digitální TV vysílání.";
       return;
     }
     autoTabId = tab.id;

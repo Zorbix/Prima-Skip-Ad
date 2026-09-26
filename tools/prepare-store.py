@@ -11,7 +11,7 @@ manifest=json.loads((root/'manifest.json').read_text())
 manifest['icons']['128']='icons/store-128.png'
 (root/'manifest.json').write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 files=['manifest.json','background.js','popup.html','popup.css','popup.js','ad-skip.js']+sorted(str(p.relative_to(root)) for p in (root/'icons').glob('*.png'))
-archive=root/f"store/prima-skip-ad-{manifest['version']}.zip"
+archive=root/f"store/prímový-skip-ad-{manifest['version']}.zip"
 with zipfile.ZipFile(archive,'w',zipfile.ZIP_DEFLATED) as z:
     for file in files: z.write(root/file,file)
 with zipfile.ZipFile(archive) as z:
