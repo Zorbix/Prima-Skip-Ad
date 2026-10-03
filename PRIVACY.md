@@ -36,3 +36,7 @@ This policy covers the extension. Websites you visit and the platform hosting th
 For support and privacy questions, email [petr.dvorak192@seznam.cz](mailto:petr.dvorak192@seznam.cz).
 
 Developer profile: [github.com/Zorbix](https://github.com/Zorbix).
+
+## Automatic startup on Oneplay (October 3, 2026)
+
+Packaged content scripts start automatic advert skipping on https://oneplay.cz/* and https://www.oneplay.cz/* whenever a page loads, without opening the popup. The popup switch disables it for the current page; reloading enables it again. Player data is processed locally in the page and is not transmitted.

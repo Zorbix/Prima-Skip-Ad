@@ -45,6 +45,7 @@ function fixture(options = {}) {
   });
   vm.runInContext(code, context);
   return { video, slider, forward, raw, writes, window,
+    load: script => vm.runInContext(script, context),
     call: action => context.manageAdSkipping(action),
     tick: () => interval?.(),
     settle: async () => { waits.splice(0).forEach(resolve => resolve()); await Promise.resolve(); },
@@ -102,4 +103,24 @@ test('duplicate start does not add a second controller, stop removes it', async 
 test('does not activate on other websites', () => {
   const f = fixture({ host: 'example.com' });
   assert.equal(f.call('start').enabled, false); assert.deepEqual(f.writes, []);
+});
+
+test('Oneplay page scripts start automatically and allow stopping until the next page load', async () => {
+  const manifest = JSON.parse(fs.readFileSync(path.join(__dirname, '../manifest.json'), 'utf8'));
+  const registration = manifest.content_scripts[0];
+  assert.deepEqual(registration.matches, ['https://oneplay.cz/*', 'https://www.oneplay.cz/*']);
+  assert.equal(registration.world, 'MAIN');
+  for (const host of ['oneplay.cz', 'www.oneplay.cz']) {
+    const f = fixture({ host });
+    for (const file of registration.js) {
+      f.load(fs.readFileSync(path.join(__dirname, '..', file), 'utf8'));
+    }
+    assert.equal(f.call('status').enabled, true);
+    assert.deepEqual(f.writes, [1718]);
+    await f.settle();
+    f.call('stop');
+    assert.equal(f.call('status').enabled, false);
+    assert.equal(f.interval, null);
+    assert.equal(f.call('start').enabled, true);
+  }
 });

@@ -14,3 +14,7 @@ Rozšíření používá oprávnění `activeTab`, `scripting` a `storage` pro u
 
 Po změně souborů klikni u rozšíření na **Znovu načíst**. Složku po instalaci nepřesouvej ani nemaž.
 
+
+## Automatické spuštění na Oneplay
+
+Při každém načtení stránky https://oneplay.cz/ nebo https://www.oneplay.cz/ se automatické přeskakování zapne bez otevření panelu. Přepínačem ho lze vypnout pro aktuální stránku; obnovením stránky se znovu zapne. Po aktualizaci rozšíření obnov také již otevřené stránky Oneplay.

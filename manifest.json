@@ -26,5 +26,19 @@
     },
     "default_title": "Prímový Skip Ad",
     "default_popup": "popup.html"
-  }
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://oneplay.cz/*",
+        "https://www.oneplay.cz/*"
+      ],
+      "js": [
+        "ad-skip.js",
+        "oneplay-start.js"
+      ],
+      "run_at": "document_idle",
+      "world": "MAIN"
+    }
+  ]
 }
