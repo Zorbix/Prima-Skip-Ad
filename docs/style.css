@@ -10,6 +10,8 @@ body {
   color: #222;
   background: url("images/sand.svg") repeat, linear-gradient(to right, #f5eee2, #dccbb0);
 }
+.page { width: min(100%, 800px); display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.extension-preview { display: block; width: 100%; height: auto; border-radius: 12px; }
 .project {
   width: min(100%, 528px);
   display: flex;
